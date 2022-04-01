@@ -152,7 +152,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Claim Your Taboo TABOOPUNK!</h1>
+        <h1 className={styles.title}>Claim Your TABOOPUNK!</h1>
         <div className={styles.grid}>
           {/* <h2>Claim your Taboo Nft</h2> */}
           {active ? (
