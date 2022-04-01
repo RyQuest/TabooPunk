@@ -1,0 +1,132 @@
+/* HEADER */
+
+/* header {
+  box-shadow: var(--header-shadow);
+} */
+
+/* header .container {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* gap: 2rem; */
+  align-items: center;
+  list-style-type: none;
+}
+
+.logo {
+  width: 60px;
+  padding: 7.5px 10px 7.5px 0;
+}
+
+.menu li a {
+  display: block;
+  padding: 15px 5px;
+}
+
+.toggle {
+  order: 1;
+  font-size: 40px;
+}
+
+.items button {
+  order: 2;
+}
+
+/* .showMenu.items {
+  display: block;
+}
+.showMenu.menu {
+  display: block;
+} */
+
+.items li:first-child {
+  margin-top: 7rem;
+}
+
+.btn {
+  border-bottom: 1px #444 solid;
+}
+
+/* .item a:hover {
+  translate: red;
+  color: red;
+} */
+
+.items {
+  padding: 10px;
+  width: 70px;
+}
+
+@media screen and (max-width: 768px) {
+  .items {
+    order: 3;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .toggle {
+    display: none;
+  }
+  .menu {
+    justify-content: space-around;
+    overflow: hidden;
+    height: 100%;
+  }
+}
+
+/* .items button {
+  padding: 9px 5px;
+} */
+
+/* .container {
+  display: flex;
+  flex-direction: column;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+} */
+
+/* BUTTONS */
+
+.btn,
+.accountText {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #a37a7a;
+  color: #020000;
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+  box-shadow: 4px 4px 0 0 #000000;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  outline: none;
+  border-radius: 13px;
+}
+.btn:hover {
+  box-shadow: none;
+}
+
+.walletbtn {
+  margin-left: 2rem;
+  border-color: green;
+}
