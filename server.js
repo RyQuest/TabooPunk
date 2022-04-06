@@ -1,17 +1,32 @@
 
-const { createServer } = require('http')
+const { createServer } = require('https')
+var fs=require('fs');
+
 const { parse } = require('url')
 const next = require('next')
 
 const dev = process.env.NODE_ENV !== 'production'
 const hostname = 'localhost'
-const port = process.env.PORT || 80
+const port = process.env.PORT || 443
 // when using middleware `hostname` and `port` must be provided below
 const app = next({ dev, hostname, port })
 const handle = app.getRequestHandler()
 
+
+
+var options = {
+  key: fs.readFileSync('/etc/letsencrypt/live/punks.taboo.io/privkey.pem', 'utf8'),
+ 
+  cert: fs.readFileSync('/etc/letsencrypt/live/punks.taboo.io/cert.pem', 'utf8'),
+ 
+ ca: fs.readFileSync('/etc/letsencrypt/live/punks.taboo.io/fullchain.pem', 'utf8')
+     
+ };
+
+
+
 app.prepare().then(() => {
-  createServer(async (req, res) => {
+  createServer(options,async (req, res) => {
     try {
       // Be sure to pass `true` as the second argument to `url.parse`.
       // This tells it to parse the query portion of the URL.
