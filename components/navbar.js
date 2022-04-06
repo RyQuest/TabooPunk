@@ -44,7 +44,7 @@ export const Navbar = () => {
 
   const [navbarOpen, setNavbarOpen] = useState(false);
   const handleToggle = () => {
-    setNavbarOpen(!navbarOpen);
+    setNavbarOpen(true);
   };
 
   return (
